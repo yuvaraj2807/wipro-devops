@@ -1,19 +1,19 @@
 apiversion: apps/v1
 kind: Deployment
 metadata:
-name: custom-app-deployment
+name: app-deployment
 spec:
 replicas: 3
 selector:
 matchLabels:
-app: custom-app
+app: cust-app
 template:
 metadata:
 labels:
-app: custom-app
+app: cust-app
 spec:
 containers:
-name: custom-app-container
+name: cust-app-container
 image: yuvaraj2807/deploymenttraining:latest
 ports:
 container Port: 80
